@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>formulaire</title>
+    <link rel="stylesheet" href="/css/css/form.css">
+</head>
+<body>
+<header>
+    <h1> Formulaire etudiant</h1>
+</header>
+
+<main>
+    <form method="post" th:object="${etudiant}">
+        <label>nom</label>
+        <input type="text" name="nom" id="nom" th:field="*{nom}">
+
+        <label>prenom</label>
+        <input type="text" name="prenom" id="prenom" th:field="*{prenom}">
+
+        <label>age</label>
+        <input type="number" name="age" id="age" th:field="*{age}">
+
+        <label>classe</label>
+        <input type="text" name="classe" id="classe" th:field="*{classe}">
+
+        <button type="submit">Valider</button>
+    </form>
+</main>
+<footer>
+    <a href="/">Retour à la page d'accueil</a>
+</footer>
+</body>
+</html>

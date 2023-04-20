@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>fruit</title>
+  <link rel="stylesheet" href="/css/css/etudiant.css">
+</head>
+<body>
+<section th:object="${etudiants}">
+  <h1 th:text="${etudiants.nom}"></h1>
+  <p th:text="${etudiants.prenom}"></p>
+  <p th:text="${etudiants.age}"></p>
+  <p th:text="${etudiants.classe}"></p>
+
+  <p><a th:href="@{/etudiants/maj/{id}(id=${etudiants.id})}">modifier</a> </p>
+  <p><a th:href="@{/etudiants/del/{id}(id=${etudiants.id})}">supprimer</a> </p>
+</section>
+<footer>
+  <a href="/">Retour à la page d'accueil</a>
+</footer>
+</body>
+</html>
